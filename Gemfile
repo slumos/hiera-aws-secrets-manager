@@ -1,6 +1,8 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+gem 'aws-sdk-secretsmanager', '~> 1.6'
 
-# Specify your gem's dependencies in hiera-aws-secrets-manager.gemspec
-gemspec
+group :development do
+  gem 'rake', '~> 10.0'
+  gem 'rspec', '~> 3.0'
+end

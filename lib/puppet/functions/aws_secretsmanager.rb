@@ -11,10 +11,6 @@ Puppet::Functions.create_function(:hiera_aws_secretsmanager) do
     param 'Puppet::LookupContext', :context
   end
 
-  def get_lookup
-    return @lookup || (@lookup =  LookupAwsSecretsManager.new)
-  end
 
-  def lookup_key(key, options, context)
-  end
+
 end

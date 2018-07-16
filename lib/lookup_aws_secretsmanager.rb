@@ -5,7 +5,6 @@ class LookupAwsSecretsManager
   end
 
   def lookup_secret(secret_id)
-    secret = JSON.parse(@client.get_secret_value(secret_id: secret_id))
-    return secret.secret_string
+    return @client.get_secret_value(secret_id: secret_id).secret_string
   end
 end
